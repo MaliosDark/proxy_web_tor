@@ -1,0 +1,68 @@
+    <!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Google Fonts - Font Divertido -->
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #343a40; /* Color de fondo oscuro */
+            color: #ffffff; /* Texto blanco */
+            font-family: 'Freckle Face', cursive; /* Font divertido */
+        }
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+        .link-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal para centrar y hacer responsive -->
+    <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+        <div class="container">
+            <!-- Formulario -->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="text-center">Browse through Tor</h1>
+                    <p class="text-center">Enter a URL to browse through the proxy:</p>
+                    <form action="/proxy/browse" method="get" class="text-center">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="url" placeholder="URL">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Browse</button>
+                            </div>
+                        </div>
+                    </form>
+                    <% if (error) { %>
+                        <p style="color: red;" class="text-center"><%= error %></p>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- Enlaces de información
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-6">
+                    <p class="text-center">Links to information:</p>
+                    <ul class="link-list text-center">
+                        <li><a href="#" class="text-white">Link 1</a></li>
+                        <li><a href="#" class="text-white">Link 2</a></li>
+                        <li><a href="#" class="text-white">Link 3</a></li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+va9pG5f+6vXWqc/r5UfUt60xqn26r/JMgi5fL+0Wq8jrszybYd2drM6LJ" crossorigin="anonymous"></script>
+</body>
+</html>

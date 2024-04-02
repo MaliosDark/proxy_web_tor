@@ -1,0 +1,93 @@
+<!-- proxyResult.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Web - Resultado de Navegación</title>
+    <!-- Enlace a Bootstrap CSS en modo oscuro -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #343a40; /* Color de fondo oscuro */
+            color: #ffffff; /* Texto blanco */
+        }
+        .status {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .connected {
+            background-color: green;
+        }
+        .disconnected {
+            background-color: red;
+        }
+        .info-section {
+            background-color: black; /* Fondo negro */
+            color: white; /* Texto blanco */
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .info-section h2,
+        .info-section p {
+            color: white; /* Texto blanco */
+        }
+        .centered-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Proxy Web</span>
+    </nav>
+    <div class="container">
+        <div class="centered-form">
+            <!-- Sección de Información de IP de conexión -->
+            <div class="info-section">
+                <h2>Información de la IP de conexión:</h2>
+                <p>IP: <%= ipInfo.ip %></p>
+                <div class="status connected"></div> <!-- Siempre muestra como conectado -->
+                <span>Conectado</span>
+                <!-- Asegúrate de que ipInfo contenga la información adecuada -->
+                <!-- Si necesitas más campos, puedes agregarlos aquí -->
+            </div>
+            <!-- Contenido principal -->
+            <h1>Resultado de Navegación</h1>
+            <p>Aquí está el contenido recibido a través del proxy:</p>
+            <iframe srcdoc="<%= body %>" style="width: 100%; height: calc(100vh - 100px); border: none;"></iframe>
+            <!-- Botón para reiniciar la conexión Tor -->
+           <!--  <button id="restartButton" class="btn btn-primary mt-3">Reiniciar IP</button>-->
+        </div>
+    </div>
+
+    <!-- Enlace a jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Script para manejar la solicitud AJAX de reinicio -->
+    <script>
+        $(document).ready(function() {
+            $('#restartButton').click(function() {
+                // Enviar una solicitud para reiniciar la conexión Tor
+                $.ajax({
+                    type: 'GET',
+                    url: '/restartTor',
+                    success: function(data) {
+                        alert(data); // Mostrar mensaje de éxito al reiniciar la conexión Tor
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error al reiniciar la conexión Tor:', error);
+                        alert('Error al reiniciar la conexión Tor. Por favor, intenta nuevamente.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
