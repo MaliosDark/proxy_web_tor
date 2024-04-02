@@ -55,7 +55,7 @@ sudo apt install nodejs npm
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/MaliosDark/proxy-web-tor.git
+git clone https://github.com/MaliosDark/proxy_web_tor.git
 ```
 
 2. Navigate to the project directory:
