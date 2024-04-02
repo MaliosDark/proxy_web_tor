@@ -4,6 +4,7 @@ Proxy web based on Node.js utilizing Tor for country switching.
 
 ##Structure
 
+```plaintext
 proxy-web-tor/
 │
 ├── src/
@@ -18,7 +19,7 @@ proxy-web-tor/
 ├── package.json
 ├── README.md
 └── LICENSE
-
+```
 
 
 
