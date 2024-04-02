@@ -30,7 +30,7 @@ proxy-web-tor/
 
 
 
-
+```
 ## Installation
 
 Before running the project, make sure you have Node.js and npm installed on your machine.
@@ -149,43 +149,6 @@ Enter a URL in the provided input field and click "Browse" to access the website
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
-
-Para agregar una imagen a tu README, asegúrate de tener la imagen en tu repositorio y luego puedes usar la sintaxis de Markdown para incluirla en tu archivo README. Aquí tienes un ejemplo de cómo hacerlo:
-
-Supongamos que tu imagen se llama `proxy-web-image.png` y está ubicada en el directorio `images` dentro de tu repositorio. Puedes seguir esta estructura:
-
-```plaintext
-proxy-web-tor/
-│
-├── src/
-│   ├── index.js
-│   ├── views/
-│   │   ├── index.ejs
-│   │   ├── proxy.ejs
-│   │   ├── proxyResult.ejs
-│   │   └── redirect.ejs
-│   └──         
-├── images/
-│   └── proxy-web-image.png
-├── package-lock.json
-├── package.json
-├── README.md
-└── LICENSE
-```
-
-Luego, en tu archivo README.md, puedes agregar la imagen de la siguiente manera:
-
-```markdown
-# Proxy Web with Tor
-
-![Proxy Web Image](images/proxy-web-image.png)
-
-Developer: Andryu Schittone
-Version: 1.0.0
-Description: Proxy web based on Node.js utilizing Tor for country switching.
-
-...
 
 ```
 
