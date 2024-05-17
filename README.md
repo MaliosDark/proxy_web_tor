@@ -4,6 +4,10 @@
 
 ![Proxy Web Image](src/tor_bro.png)
 
+## Live Demo
+
+[![Website proxy.aswss.com](https://img.shields.io/website-up-down-green-red/https/proxy.aswss.com.svg?style=for-the-badge&label=proxy.aswss.com)](https://proxy.aswss.com/)
+
 
 Proxy web based on Node.js utilizing Tor for country switching.
 
@@ -149,7 +153,3 @@ Enter a URL in the provided input field and click "Browse" to access the website
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
-```
-
-Asegúrate de ajustar la ruta de la imagen (`images/proxy-web-image.png`) según la ubicación real de tu imagen en el repositorio.
